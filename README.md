@@ -35,10 +35,21 @@ Load each colored image from the dataset into memory. Apply the OpenCL kernel to
 ## Libraries Used
 The program uses the `stb_image.h` and `stb_image_write.h` libraries for image loading and saving operations. These libraries are used because they provide a simple API for image manipulation in C, as OpenCV API is not available in C.
 
+The `stb_image.h` and `stb_image_write.h` libraries are part of the stb single-file public domain libraries for C/C++. You can find them in the [stb repository](https://github.com/nothings/stb) on GitHub.
+
+Here are the direct links to the libraries:
+
+- [stb_image.h](https://github.com/nothings/stb/blob/master/stb_image.h)
+- [stb_image_write.h](https://github.com/nothings/stb/blob/master/stb_image_write.h)
+
+To use them in your project, you can download these files and include them in your project directory. Then, you can include them in your C code as follows:
+
 ```c
-#include <stb_image.h>
-#include <stb_image_write.h>
+#include "stb_image.h"
+#include "stb_image_write.h"
 ```
+
+Make sure the library files are in the same directory as your C source file or in a directory specified in your include path.
 
 `stb_image.h` is used to load images into memory. It supports most common image file formats and provides a simple way to read pixel data.
 
